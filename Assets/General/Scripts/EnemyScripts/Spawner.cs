@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     public GameObject enemyPrefab; // Prefab do inimigo
     public Transform spawnPoint; // Ponto de spawn do inimigo
     public TextMeshProUGUI numCriadouro;
+    public GameObject seta;
     public float spawnInterval = 3f; // Intervalo de spawn em segundos
     public bool enabledSpawn = true ;
     public bool nerfado = false ;
@@ -26,6 +27,7 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
+        seta.SetActive(!nerfado);
         numCriadouro.text = criadouroDaDengue.ToString();
         mosquitosTotais = mosquitosTotais + mosquitosNacena;
         if(mosquitosNacena == limitSpwan)

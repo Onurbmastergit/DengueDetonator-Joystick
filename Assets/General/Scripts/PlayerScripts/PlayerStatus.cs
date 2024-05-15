@@ -33,6 +33,7 @@ public class PlayerStatus : MonoBehaviour
         AtualizarBarraVida();
         if(Spawner.criadouroDaDengue == 0)
         {
+            GameHud.SetActive(false);
             GameWinHud.SetActive(true);
             HandPlayer.SetActive(false);
         }

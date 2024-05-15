@@ -23,14 +23,12 @@ public class PlayerMoviment : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-
-        // Lock cursor
-        UnityEngine.Cursor.lockState = UnityEngine.CursorLockMode.Locked;
-        UnityEngine.Cursor.visible = false;
     }
 
   void Update()
 {
+    UnityEngine.Cursor.lockState = UnityEngine.CursorLockMode.Locked;
+    UnityEngine.Cursor.visible = false;
     Vector3 forward = transform.TransformDirection(Vector3.forward);
     Vector3 right = transform.TransformDirection(Vector3.right);
     bool isRunning = Input.GetKey(KeyCode.LeftShift);

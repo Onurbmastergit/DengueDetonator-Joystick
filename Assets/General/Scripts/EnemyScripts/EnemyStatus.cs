@@ -13,6 +13,7 @@ public class EnemyStatus : MonoBehaviour
     {
         vidaAtual = vidaTotal;
         Spawner.GetComponent<Spawner>();
+        Destroy(gameObject, 60);
     }
     public void ReceberDano(int valor)
     {
